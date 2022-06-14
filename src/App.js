@@ -6,8 +6,7 @@ import Products from "../src/components/Products";
 import Footer from "../src/components/Footer";
 
 const Container = styled.div`
-  width: 100%;
-  height: 100%;
+
 `
 
 function App() {

@@ -8,17 +8,18 @@ import { ReactComponent as SvgDotPattern4 } from "../images/Vector5.svg";
 
 
 const Container = styled.section`
+    position: relative;
     max-width: 100vw;
-    max-height: 100vh;
+    height: 100vh;
     background-color: #FFFFFF;
 `
 const Header = styled.div`
     position: absolute;
+    width: 40vw;
     top: 55%;
     left: 35%;
-    transform: translate(-35%, -55%);
-    width: 40vw;
-    z-index: 10;
+    transform: translate( -35%, -55%);
+    z-index: 1;
 `
 const Title = styled.h1`
     font-size: 64px;
@@ -37,18 +38,17 @@ const ReadMoreButton = styled.button`
 `
 const DecoratorBlob1 = styled(SvgDotPattern)(props => [`
     position: absolute;
-    top: 5%;
+    top: 0%;
     left: -10%;
     transform: translate( -10%, 5%);
-    width: 50%;
     `]);
 
 const DecoratorBlob2 = styled(SvgDotPattern1)(props => [`
     position: absolute;
     top: 110%;
-    left: -13%;
+    left: 0%;
     transform: translate(-13%, -110%);
-    width: 50%;
+    z-index: 1;
     `]);
 
 const DecoratorBlob3 = styled(SvgDotPattern2)(props => [`
@@ -56,15 +56,13 @@ const DecoratorBlob3 = styled(SvgDotPattern2)(props => [`
     top: 25%;
     left: 50%;
     transform: translate(-50%, -25%);
-    width: 50%;
     `]);
 
 const DecoratorBlob4 = styled(SvgDotPattern3)(props => [`
     position: absolute;
-    top: 30%;
+    top: 20%;
     right: 0%;
-    transform: translate( 20%, -20%);
-    width: 50%;
+    transform: translate( -0%, -20%);
     overflow: hidden;
     `]);
 
@@ -73,8 +71,6 @@ const DecoratorBlob5 = styled(SvgDotPattern4)(props => [`
     top: 55%;
     right: 0%;
     transform: translate(-0%, -10%);
-    width: 50%;
-    z-index: -1;
     `]);
 
 

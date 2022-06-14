@@ -1,9 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
+import { ReactComponent as plantPicture } from "../images/pngwing1.svg";
+import { ReactComponent as SvgDotPattern5 } from "../images/Vector6.svg";
+
+
 const Container = styled.section`
-    max-width: 100vw;
-    max-height: 100vh;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
     background-color: #FFFFFF;
 `
 
@@ -13,7 +18,7 @@ const Header = styled.div`
     left: 5%;
     transform: translate(-5%, -55%);
     width: 40vw;
-    z-index: 10;
+    z-index: 1;
 `
 const Title = styled.h1`
     font-size: 64px;
@@ -35,6 +40,22 @@ const ReadMoreButton = styled.button`
     border-radius: 100px;
 `
 
+// const PlantPicture = styled.svg`
+//     position: absolute;
+//     background-image: url(${plantPicture});
+//     top: -20%;
+//     left: 100%;
+//     z-index: 3;
+// `
+
+const PlantPicture = styled(plantPicture)(props => [`
+    position: absolute;
+    top: -10%;
+    right: 10%;
+    transform: translate(-10%, -10%);
+    z-index: 1;
+    `]);
+
 
 function About() {
     return(
@@ -44,6 +65,7 @@ function About() {
                 <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Description>
                 <ReadMoreButton>Read More</ReadMoreButton>
             </Header>
+                <PlantPicture />
         </Container>
     );
 }
