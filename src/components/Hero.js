@@ -1,10 +1,13 @@
 import styled from "styled-components";
 import React from "react";
+
 import { ReactComponent as SvgDotPattern } from "../images/Vector1.svg";
 import { ReactComponent as SvgDotPattern1 } from "../images/Vector2.svg";
 import { ReactComponent as SvgDotPattern2 } from "../images/Vector3.svg";
 import { ReactComponent as SvgDotPattern3 } from "../images/Vector4.svg";
 import { ReactComponent as SvgDotPattern4 } from "../images/Vector5.svg";
+
+import Navbar from "./Navbar";
 
 
 const Container = styled.section`
@@ -16,10 +19,10 @@ const Container = styled.section`
 const Header = styled.div`
     position: absolute;
     width: 40vw;
-    top: 55%;
+    top: 50%;
     left: 35%;
     transform: translate( -35%, -55%);
-    z-index: 1;
+    z-index: 2;
 `
 const Title = styled.h1`
     font-size: 64px;
@@ -40,7 +43,8 @@ const DecoratorBlob1 = styled(SvgDotPattern)(props => [`
     position: absolute;
     top: 0%;
     left: 0%;
-    transform: translate( -10%, 0%);
+    transform: translate( 0%, 0%);
+    z-index: 1;
     `]);
 
 const DecoratorBlob2 = styled(SvgDotPattern1)(props => [`
@@ -60,17 +64,18 @@ const DecoratorBlob3 = styled(SvgDotPattern2)(props => [`
 
 const DecoratorBlob4 = styled(SvgDotPattern3)(props => [`
     position: absolute;
-    top: 20%;
-    right: 0%;
-    transform: translate( -10%, -20%);
+    top: 40%;
+    right: 5%;
+    transform: translate( 0%, -20%);
     overflow: hidden;
+    
     `]);
 
 const DecoratorBlob5 = styled(SvgDotPattern4)(props => [`
     position: absolute;
     top: 55%;
-    right: 10%;
-    transform: translate(-10%, -10%);
+    right: 15%;
+    transform: translate( 0%, -10%);
     `]);
 
 
@@ -78,6 +83,7 @@ const DecoratorBlob5 = styled(SvgDotPattern4)(props => [`
 function Hero() {
     return(     
         <Container>
+            <Navbar />
             <Header>
                 <Title>Lorem ipsum dolor sit amet.</Title>
                 <ReadMoreButton>Read More</ReadMoreButton>
