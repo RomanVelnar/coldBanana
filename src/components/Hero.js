@@ -26,7 +26,7 @@ const Title = styled.h1`
     font-wight: 700;
     text-transform: uppercase;
     color: #212121;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
 `
 const ReadMoreButton = styled.button`
     background: linear-gradient(90deg, rgba(115,224,169,1) 0%, rgba(91,104,223,1) 100%);
@@ -39,8 +39,8 @@ const ReadMoreButton = styled.button`
 const DecoratorBlob1 = styled(SvgDotPattern)(props => [`
     position: absolute;
     top: 0%;
-    left: -10%;
-    transform: translate( -10%, 5%);
+    left: 0%;
+    transform: translate( -10%, 0%);
     `]);
 
 const DecoratorBlob2 = styled(SvgDotPattern1)(props => [`
@@ -62,15 +62,15 @@ const DecoratorBlob4 = styled(SvgDotPattern3)(props => [`
     position: absolute;
     top: 20%;
     right: 0%;
-    transform: translate( -0%, -20%);
+    transform: translate( -10%, -20%);
     overflow: hidden;
     `]);
 
 const DecoratorBlob5 = styled(SvgDotPattern4)(props => [`
     position: absolute;
     top: 55%;
-    right: 0%;
-    transform: translate(-0%, -10%);
+    right: 10%;
+    transform: translate(-10%, -10%);
     `]);
 
 

@@ -10,62 +10,83 @@ const Container = styled.section`
     width: 100vw;
     height: 100vh;
     background-color: #FFFFFF;
+    margin-top: 20vh !important;
+`
+
+const FlexContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    
+
 `
 
 const Header = styled.div`
-    position: absolute;
-    top: 55%;
-    left: 5%;
-    transform: translate(-5%, -55%);
-    width: 40vw;
+    width: 35vw;
     z-index: 1;
 `
+
 const Title = styled.h1`
-    font-size: 64px;
+    font-size: 36px;
     font-wight: 700;
     text-transform: uppercase;
     color: #212121;
-    margin-bottom: 0px;
+    margin-bottom: 20px !important;
 `
+
 const Description = styled.p`
     font-size: 16px;
+    margin-bottom: 38px !important;
 `
 
 const ReadMoreButton = styled.button`
     background: linear-gradient(90deg, rgba(115,224,169,1) 0%, rgba(91,104,223,1) 100%);
     color: #FFFFFF;
-    font-size: 22px;
-    padding: 12px 57px !important;
+    font-size: 16px;
+    padding: 9px 43px !important;
     border: none;
     border-radius: 100px;
 `
 
-// const PlantPicture = styled.svg`
-//     position: absolute;
-//     background-image: url(${plantPicture});
-//     top: -20%;
-//     left: 100%;
-//     z-index: 3;
-// `
+const PlantContainer = styled.div`
+    position: relative;
+    width: 40vw;
+    height: 50vh;
+`
 
 const PlantPicture = styled(plantPicture)(props => [`
     position: absolute;
-    top: -10%;
-    right: 10%;
-    transform: translate(-10%, -10%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 200px !important;
     z-index: 1;
+    `]);
+
+const DecoratorBlob2 = styled(SvgDotPattern5)(props => [`
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    z-index: 0;
     `]);
 
 
 function About() {
     return(
         <Container>
-            <Header>
-                <Title>Lorem ipsum dolor sit amet.</Title>
-                <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Description>
-                <ReadMoreButton>Read More</ReadMoreButton>
-            </Header>
-                <PlantPicture />
+            <FlexContainer>
+                <Header>
+                    <Title>Lorem ipsum dolor sit amet.</Title>
+                    <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Description>
+                    <ReadMoreButton>Read More</ReadMoreButton>
+                </Header>
+                <PlantContainer>
+                    <PlantPicture />
+                    <DecoratorBlob2 />
+                </PlantContainer>
+            </FlexContainer>
         </Container>
     );
 }
