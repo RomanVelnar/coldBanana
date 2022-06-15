@@ -5,6 +5,7 @@ import About from "../src/components/About";
 import Products from "../src/components/Products";
 import Footer from "../src/components/Footer";
 import DisplayProducts from "./components/DisplayProducts";
+import FetchProductData from "./components/FetchProductData";
 
 const Container = styled.div`
 
@@ -16,7 +17,7 @@ function App() {
     <Container>
       <Hero />
       <About />
-      <DisplayProducts />
+      <FetchProductData />
     </Container>
   )
 }

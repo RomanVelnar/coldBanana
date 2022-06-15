@@ -13,13 +13,14 @@ function Products() {
     }, []);
 
     const getAllProducts = () => {
-        axios.get('${url}past').then((res) => {
+        axios.get('${url}').then((res) => {
+
+
             const allProducts = res.data;
             // add data to State
             getProducts(allProducts);
-
         })
-        .catch(err => console.error('Error: ${error}'));
+        .catch(error => console.error('Error: ${error}'));
     }
 
     return(
