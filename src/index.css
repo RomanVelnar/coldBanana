@@ -9,6 +9,7 @@ html, body {
   font-size: clamp(100%, 1rem + 2vw, 24px);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x:hidden
 }
 
 * {    

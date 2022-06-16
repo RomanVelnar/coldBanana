@@ -14,7 +14,7 @@ import FooterImg6 from "../images/footerImg6.png"
 
 const Container = styled.section`
     position: relative;  
-    width: 100vw;
+    max-width: 100vw;
     height: auto;
     display: flex;
     flex-direction: row;

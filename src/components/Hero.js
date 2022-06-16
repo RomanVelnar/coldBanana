@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import React from "react";
 
-import { ReactComponent as SvgDotPattern } from "../images/Vector1.svg";
-import { ReactComponent as SvgDotPattern1 } from "../images/Vector2.svg";
-import { ReactComponent as SvgDotPattern2 } from "../images/Vector3.svg";
-import { ReactComponent as SvgDotPattern3 } from "../images/Vector4.svg";
-import { ReactComponent as SvgDotPattern4 } from "../images/Vector5.svg";
+import ImageBloob1 from "../images/heroBloob1.png"
+import ImageBloob2 from "../images/heroBloob2.png"
+import ImageBloob3 from "../images/heroBloob3.png"
+import ImageBloob4 from "../images/heroBloob4.png"
+import ImageBloob5 from "../images/heroBloob5.png"
 
 import Navbar from "./Navbar";
 
@@ -13,15 +13,15 @@ import Navbar from "./Navbar";
 const Container = styled.section`
     position: relative;
     max-width: 100vw;
-    height: 100vh;
+    max-height: 100vh;
     background-color: #FFFFFF;
 `
 const Header = styled.div`
     position: absolute;
     width: 40vw;
-    top: 50%;
+    top: 80%;
     left: 35%;
-    transform: translate( -35%, -55%);
+    transform: translate( -35%, 80%);
     z-index: 2;
 `
 const Title = styled.h1`
@@ -39,44 +39,53 @@ const ReadMoreButton = styled.button`
     border: none;
     border-radius: 100px;
 `
-const DecoratorBlob1 = styled(SvgDotPattern)(props => [`
+const Image1 = styled.img`
+    width: 30%;
+    height: auto;
     position: absolute;
     top: 0%;
     left: 0%;
     transform: translate( 0%, 0%);
     z-index: 1;
-    `]);
-
-const DecoratorBlob2 = styled(SvgDotPattern1)(props => [`
+`
+const Image2 = styled.img`
+    width: 13%;
+    height: auto;
     position: absolute;
-    top: 110%;
+    top: 100%;
     left: 0%;
-    transform: translate(-13%, -110%);
+    transform: translate( 0%, 100%);
     z-index: 1;
-    `]);
-
-const DecoratorBlob3 = styled(SvgDotPattern2)(props => [`
+`
+const Image3 = styled.img`
+    width: 23%;
+    height: auto;
     position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -25%);
-    `]);
-
-const DecoratorBlob4 = styled(SvgDotPattern3)(props => [`
+    top: 35%;
+    left: 48%;
+    transform: translate(-48%, 35%);
+    z-index: 1;
+`
+const Image4 = styled.img`
+    width: 23%;
+    height: auto;
     position: absolute;
-    top: 40%;
-    right: 5%;
-    transform: translate( 0%, -20%);
-    overflow: hidden;
-    
-    `]);
-
-const DecoratorBlob5 = styled(SvgDotPattern4)(props => [`
+    top: 30%;
+    right: 0%;
+    transform: translate( 0%, 30%);
+    z-index: 2;
+`
+const Image5 = styled.img`
+    width: 30%;
+    height: auto;
     position: absolute;
-    top: 55%;
-    right: 15%;
-    transform: translate( 0%, -10%);
-    `]);
+    top: 92%;
+    right: 19%;
+    transform: translate( 19%, 92%);
+    z-index: 1;
+`
+
+
 
 
 
@@ -88,11 +97,11 @@ function Hero() {
                 <Title>Lorem ipsum dolor sit amet.</Title>
                 <ReadMoreButton>Read More</ReadMoreButton>
             </Header>
-            <DecoratorBlob1 />
-            <DecoratorBlob2 />
-            <DecoratorBlob3 />
-            <DecoratorBlob4 />
-            <DecoratorBlob5 />
+            <Image1 src={ImageBloob1} />
+            <Image2 src={ImageBloob2} />
+            <Image3 src={ImageBloob3} />
+            <Image4 src={ImageBloob4} />
+            <Image5 src={ImageBloob5} />
         </Container>
     );
 };

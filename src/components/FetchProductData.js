@@ -4,8 +4,9 @@ import DisplayProducts from './DisplayProducts';
 import styled from 'styled-components';
 
 const Container = styled.section`
-    width: 100vw;
-    height: 100vh;
+    position: relative;
+    max-width: 100vw;
+    height: auto;
     padding: 302px 75px !important;
 `
 

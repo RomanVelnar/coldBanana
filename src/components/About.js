@@ -5,12 +5,12 @@ import { ReactComponent as plantPicture } from "../images/pngwing1.svg";
 import { ReactComponent as SvgDotPattern5 } from "../images/Vector6.svg";
 
 
-const Container = styled.section`
+const Container1 = styled.section`
     position: relative;
-    width: 100vw;
+    max-width: 100vw;
     height: 100vh;
     background-color: #FFFFFF;
-    margin-top: 20vh !important;
+    margin-top: 100vh !important;
 `
 
 const FlexContainer = styled.div`
@@ -75,7 +75,7 @@ const DecoratorBlob2 = styled(SvgDotPattern5)(props => [`
 
 function About() {
     return(
-        <Container>
+        <Container1>
             <FlexContainer>
                 <Header>
                     <Title>Lorem ipsum dolor sit amet.</Title>
@@ -87,7 +87,7 @@ function About() {
                     <DecoratorBlob2 />
                 </PlantContainer>
             </FlexContainer>
-        </Container>
+        </Container1>
     );
 }
 
