@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo, useState } from "react";
 import styled from "styled-components";
 
 const Container = styled.section`
@@ -11,7 +11,6 @@ const CardContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: calc(20px + 1%);
-
 `
 
 const Card = styled.div`
@@ -50,18 +49,19 @@ const CardPrice = styled.p`
 
 function DisplayProducts(props) {
 
-    const { product } = props;
+    const { product } = props; 
+  
 
         return(
             <Container>
-                {product.length > 0 ? (
+                {product[0].length > 0 ? (
                     <CardContainer>
-                        {product[0].map((post) => (
-                        <Card key={post.id}>
-                            <Image src={post.image} />
+                        {product[0].map((item) => (
+                        <Card key={item.id}>
+                            <Image src={item.image} />
                             <CardTextContainer>   
-                                <CardTitle>{post.product_name}</CardTitle>
-                                <CardPrice>£{post.price}</CardPrice>
+                                <CardTitle>{item.product_name}</CardTitle>
+                                <CardPrice>£{item.price}</CardPrice>
                             </CardTextContainer> 
                         </Card>
                         ))}
@@ -69,7 +69,7 @@ function DisplayProducts(props) {
                         ) : (
                         <p className="loading">Loading... </p>
                         )}
-            </Container>
+            </Container>          
         )
 }
 
