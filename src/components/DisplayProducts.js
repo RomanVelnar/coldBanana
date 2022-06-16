@@ -50,26 +50,45 @@ const CardPrice = styled.p`
 function DisplayProducts(props) {
 
     const { product } = props; 
+    const [items] = useState(product);
+    const [numberOfItemsToShown, setNumberOfItemsToShown] = useState(6);
+
+    
+    
+    const showMore = () => {
+        if (numberOfItemsToShown + 3 <= items[0].lenght) {
+            setNumberOfItemsToShown(numberOfItemsToShown + 3);
+        } else {
+            setNumberOfItemsToShown(items[0].lenght);
+        }
+    };
+
+    console.log(product)
+
+    const itemsToShow = useMemo(() => {
+        return items[0].slice(0, numberOfItemsToShown).map((item, index) => 
+            <Card key={item.id}>
+                <Image src={item.image} />
+                <CardTextContainer>   
+                    <CardTitle>{item.product_name}</CardTitle>
+                    <CardPrice>£{item.price}</CardPrice>
+                </CardTextContainer> 
+            </Card>);
+    }, [items, numberOfItemsToShown]);
   
 
         return(
             <Container>
-                {product[0].length > 0 ? (
+                {product.length > 0 ? (
                     <CardContainer>
-                        {product[0].map((item) => (
-                        <Card key={item.id}>
-                            <Image src={item.image} />
-                            <CardTextContainer>   
-                                <CardTitle>{item.product_name}</CardTitle>
-                                <CardPrice>£{item.price}</CardPrice>
-                            </CardTextContainer> 
-                        </Card>
-                        ))}
+                        {itemsToShow}
                     </CardContainer>
                         ) : (
                         <p className="loading">Loading... </p>
                         )}
-            </Container>          
+            <button onClick={showMore}>show More</button>
+            </Container>
+            
         )
 }
 

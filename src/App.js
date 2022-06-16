@@ -6,6 +6,7 @@ import Footer from "../src/components/Footer";
 import DisplayProducts from "./components/DisplayProducts";
 import FetchProductData from "./components/FetchProductData";
 
+
 const Container = styled.div`
   max-width: 100vw;
 `
@@ -16,8 +17,9 @@ function App() {
     <Container>
       {/* <Hero /> */}
       {/* <About /> */}
-      <FetchProductData />
+      {/* <FetchProductData /> */}
       {/* <DisplayProducts /> */}
+      <Footer />
     </Container>
   )
 }
