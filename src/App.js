@@ -16,7 +16,7 @@ function App() {
   return (
     <Container>
       {/* <Hero /> */}
-      {/* <About /> */}
+      <About />
       {/* <FetchProductData /> */}
       {/* <DisplayProducts /> */}
       <Footer />
