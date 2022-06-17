@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
-import DisplayProducts from './DisplayProducts';
 import styled from 'styled-components';
 
 const Container = styled.section`
@@ -48,17 +47,28 @@ const CardPrice = styled.p`
     color: #747474 ;
     font-weight: bold;
 `
+const LoadMoreButton = styled.a`
+    font-size: 24px;
+    font-weight: 600;
+    color: #5C6DDE;
+    padding-top: 4vh !important;
+`
 
 const API_URL = 'https://my-json-server.typicode.com/TomSearle/cb-devtest-api/products';
 
 const FetchProductData = () => {
   const [product, setProduct] = useState([]);
+  const [visible, setVisible] = useState(3)
 
+  const showMoreItems = () => {
+    setVisible(prevValue => prevValue + 3);
+  };
+  
   const fetchData = async () => {
     const { data } = await axios.get(API_URL);
     setProduct(data);
   };
-
+  
   useEffect(() => {
     fetchData();
   }, []);
@@ -67,7 +77,7 @@ const FetchProductData = () => {
     <Container>
         {product.length > 0 ? (
             <CardContainer>
-                {product[0].map((item) => (
+                {product[0].slice(0, visible).map((item) => (
                 <Card key={item.id}>
                     <Image src={item.image} />
                     <CardTextContainer>   
@@ -76,6 +86,7 @@ const FetchProductData = () => {
                     </CardTextContainer> 
                 </Card>
                 ))}
+                <LoadMoreButton onClick={showMoreItems}>Load More</LoadMoreButton>
             </CardContainer>
                 ) : (
                 <p className="loading">Loading... </p>
