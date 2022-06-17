@@ -15,10 +15,11 @@ import FooterDecoBlob from "../images/footerBlob.png"
 const Container = styled.section`
     position: relative;  
     max-width: 100vw;
-    height: auto;
+    height: 15vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    padding-top: 25% !important;
 `
 const FooterText = styled.div`
     display: flex;
@@ -67,6 +68,7 @@ const FooterFollowUsItems = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-bottom: 10% !important;
 `
 const FooterFollowUsItem = styled.div`
     width: 45px;
@@ -89,7 +91,7 @@ const DecoratorBlob = styled.img`
     position: absolute;
     bottom: 0%;
     left: 0%;
-    transform: translate(0%, 15%);
+    transform: translate(0%, 30%);
     width: 40%;
     height: auto;
 `

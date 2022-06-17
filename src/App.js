@@ -14,11 +14,10 @@ function App() {
 
   return (
     <Container>
-      {/* <Hero /> */}
-      {/* <About /> */}
-
+      <Hero />
+      <About />
       <Products />
-      {/* <Footer /> */}
+      <Footer />
     </Container>
   )
 }

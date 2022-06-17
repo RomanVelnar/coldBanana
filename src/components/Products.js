@@ -6,20 +6,21 @@ const Container = styled.section`
     position: relative;
     max-width: 100vw;
     height: auto;
-    padding: 302px 75px !important;
+    padding:  3% 5% !important;
 `
 
 const CardContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: calc(20px + 1%);
+    gap: calc(90px + 1%);
+    justify-items: center;
 `
 
 const Card = styled.div`
     display: flex;
     flex-direction: column;
-    width: 369px;
-    height: 440px;
+    width: 100%;
+    height: 100%;
     border-radius: 25px;
     box-shadow: 1px 1px 11px 9px #E5E5E5;
 `
@@ -35,6 +36,7 @@ const Image = styled.img`
 const CardTextContainer = styled.div`
     padding-left: 19px !important;
     padding-top: 31px !important;
+    padding-bottom: 31px !important;
 `
 
 const CardTitle = styled.h4`

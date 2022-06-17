@@ -9,7 +9,9 @@ const Container = styled.nav`
     justify-content: space-between;
     background-color: transperent;
     z-index: 3;
-    padding: 49px 71px !important;
+    max-width: 100vw;
+    max-height: 100vh;
+    padding: 2.5% !important;
 `
 
 const Logo = styled.h1`
@@ -39,8 +41,6 @@ const NavLinks = styled.a`
 const Links = styled.li`
     margin-right: 37px !important; 
 `
-
-
 const NavButton = styled.button`
     background: linear-gradient(90deg, rgba(115,224,169,1) 0%, rgba(91,104,223,1) 100%);
     color: #FFFFFF;
