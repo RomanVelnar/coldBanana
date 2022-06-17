@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import React from "react";
 
-import ImageBloob1 from "../images/heroBloob1.png"
-import ImageBloob2 from "../images/heroBloob2.png"
-import ImageBloob3 from "../images/heroBloob3.png"
-import ImageBloob4 from "../images/heroBloob4.png"
-import ImageBloob5 from "../images/heroBloob5.png"
+import ImageBloob1 from "../images/heroBlob1.png"
+import ImageBloob2 from "../images/heroBlob2.png"
+import ImageBloob3 from "../images/heroBlob3.png"
+import ImageBloob4 from "../images/heroBlob4.png"
+import ImageBloob5 from "../images/heroBlob5.png"
 
 import Navbar from "./Navbar";
 

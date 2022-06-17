@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import { ReactComponent as plantPicture } from "../images/pngwing1.svg";
-import { ReactComponent as SvgDotPattern5 } from "../images/Vector6.svg";
+import PlantImg from "../images/plant.png";
+import PlantBG from "../images/plantBG.png"
 
 
 const Container1 = styled.section`
@@ -11,6 +11,7 @@ const Container1 = styled.section`
     height: 100vh;
     background-color: #FFFFFF;
     margin-top: 100vh !important;
+    padding-top: 10% !important;
 `
 
 const FlexContainer = styled.div`
@@ -18,8 +19,6 @@ const FlexContainer = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    
-
 `
 
 const Header = styled.div`
@@ -51,26 +50,31 @@ const ReadMoreButton = styled.button`
 
 const PlantContainer = styled.div`
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 40vw;
     height: 50vh;
 `
 
-const PlantPicture = styled(plantPicture)(props => [`
+const PlantDeco = styled.img`
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    margin-bottom: 200px !important;
+    transform: translate(-50%, -70%);
+    width: 95%;
+    height: auto;
     z-index: 1;
-    `]);
+`
 
-const DecoratorBlob2 = styled(SvgDotPattern5)(props => [`
+const PlantDecoBG = styled.img`
     position: absolute;
-    top: 50%;
+    top: 0%;
     left: 50%;
-    transform: translate(-50%, -20%);
-    z-index: 0;
-    `]);
+    transform: translate(-50%, 0%);
+    width: 100%;
+    height: auto;
+`
 
 
 function About() {
@@ -83,8 +87,8 @@ function About() {
                     <ReadMoreButton>Read More</ReadMoreButton>
                 </Header>
                 <PlantContainer>
-                    <PlantPicture />
-                    <DecoratorBlob2 />
+                    <PlantDeco src={PlantImg} />
+                    <PlantDecoBG src={PlantBG} />
                 </PlantContainer>
             </FlexContainer>
         </Container1>

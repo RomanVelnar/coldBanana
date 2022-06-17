@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { ReactComponent as SvgDotPattern5 } from "../images/Vector7.svg";
 import FooterImg1 from "../images/footerImg1.png"
 import FooterImg2 from "../images/footerImg2.png"
 import FooterImg3 from "../images/footerImg3.png"
@@ -10,6 +9,7 @@ import FooterImg41 from "../images/footerImg4.1.png"
 import FooterImg5 from "../images/footerImg5.png"
 import FooterImg51 from "../images/footerImg5.1.png"
 import FooterImg6 from "../images/footerImg6.png"
+import FooterDecoBlob from "../images/footerBlob.png"
 
 
 const Container = styled.section`
@@ -85,12 +85,15 @@ const FollowUsImgOut = styled.img`
 const FollowUsImgIn = styled.img`
 
 `
-const DecoratorBlob1 = styled(SvgDotPattern5)(props => [`
+const DecoratorBlob = styled.img`
     position: absolute;
     bottom: 0%;
     left: 0%;
     transform: translate(0%, 15%);
-    `]);
+    width: 40%;
+    height: auto;
+`
+
 
 
 function Footer() {
@@ -127,7 +130,7 @@ function Footer() {
                     <FooterFollowUsItem><FollowUsImgOut src={FooterImg6} /></FooterFollowUsItem>
                 </FooterFollowUsItems>
             </FooterFollowUsContainer>
-        <DecoratorBlob1 />
+            <DecoratorBlob src={FooterDecoBlob} />
         </Container>
     )
 }
