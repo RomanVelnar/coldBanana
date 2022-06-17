@@ -6,7 +6,7 @@ const Container = styled.section`
     position: relative;
     max-width: 100vw;
     height: auto;
-    padding:  3% 5% !important;
+    padding:  0% 5% !important;
 `
 
 const CardContainer = styled.div`
@@ -53,7 +53,7 @@ const LoadMoreButton = styled.a`
     font-size: 24px;
     font-weight: 600;
     color: #5C6DDE;
-    padding-top: 4vh !important;
+    margin-left: -50% !important;
 `
 
 const API_URL = 'https://my-json-server.typicode.com/TomSearle/cb-devtest-api/products';
