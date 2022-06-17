@@ -20,12 +20,24 @@ const Container = styled.section`
     flex-direction: row;
     justify-content: space-around;
     padding-top: 25% !important;
+
+    @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20vh !important;
+    }
 `
 const FooterText = styled.div`
     display: flex;
     flex-direction: column;
     width: 33%;
     z-index: 1;
+
+    @media (max-width: 480px) {
+        display: none;
+    }
 `
 const FooterTextTitle = styled.h1`
     font-size: 36px;
@@ -33,16 +45,59 @@ const FooterTextTitle = styled.h1`
     color: #FFFFFF;
     padding-bottom: 15px !important;
     text-transform: uppercase;
+    cursor: pointer;
+
+    @media (max-width: 1200px) {
+        font-size: 34px;   
+    }
+    @media (max-width: 1024px) {
+        font-size: 32px;   
+    }
+    @media (max-width: 900px) {
+        font-size: 30px;   
+    }
+    @media (max-width: 768px) {
+        font-size: 28px;   
+    }
 `
 const FooterTextText = styled.p`
     font-size: 22px;
     font-weight: 400;
     color: #FFFFFF;
+
+    @media (max-width: 1200px) {
+        font-size: 20px;   
+    }
+    @media (max-width: 1024px) {
+        font-size: 18px;   
+    }
+    @media (max-width: 900px) {
+        font-size: 16px;   
+    }
+    @media (max-width: 768px) {
+        font-size: 14px;   
+    }
+`
+const FooterCompanyContainerWrap = styled.div`
+    display: flex;
+    flex-direction: row;
+
+    @media (max-width: 480px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-left: 20% !important;
+        padding-bottom: 10% !important;
+    }
 `
 const FooterCompanyContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 10vw; 
+
+    @media (max-width: 480px) {
+        width: 40vw;
+    }
 `
 const FooterCompanyTitle = styled.h3`
     font-size: 20px;
@@ -50,19 +105,51 @@ const FooterCompanyTitle = styled.h3`
     background: -webkit-linear-gradient(90deg, rgba(115,224,169,1) 0%, rgba(91,104,223,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    padding-bottom: 21px !important
+    padding-bottom: 21px !important;
+    cursor: pointer;
+
+    @media (max-width: 1200px) {
+        font-size: 18px;   
+    }
+    @media (max-width: 1024px) {
+        font-size: 16px;   
+    }
+    @media (max-width: 900px) {
+        font-size: 14px;   
+    }
+    @media (max-width: 768px) {
+        font-size: 12px;   
+    }
+    @media (max-width: 480px) {
+        font-size: 18px;   
+    }
 `
 const FooterCompanyLinks = styled.a`
     font-size: 18px;
     font-weight: 400;
     color: #212121;
     padding-bottom: 12px !important;
+
+    @media (max-width: 1200px) {
+        font-size: 16px;   
+    }
+    @media (max-width: 1024px) {
+        font-size: 14px;   
+    }
+    @media (max-width: 900px) {
+        font-size: 12px;   
+    }
+    @media (max-width: 768px) {
+        font-size: 10px;   
+    }
+    @media (max-width: 480px) {
+        font-size: 16px;   
+    }
 `
 const FooterFollowUsContainer= styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // margin-left: 100px !important;
 `
 const FooterFollowUsItems = styled.div`
     display: flex;
@@ -80,12 +167,39 @@ const FooterFollowUsItem = styled.div`
     align-items: center;
     justify-content: center;
     position: relative;
+    cursor: pointer;
+
+    @media (max-width: 1200px) {
+        width: 41px;
+        height: 41px;
+        margin-right: 35px !important;   
+    }
+    @media (max-width: 1024px) {
+        width: 37px;
+        height: 37px;
+        margin-right: 32px !important;   
+    }
+    @media (max-width: 900px) {
+        width: 33px;
+        height: 33px;
+        margin-right: 29px !important;   
+    }
+    @media (max-width: 768px) {
+        width: 29px;
+        height: 29px;
+        margin-right: 26px !important;
+    }
 `
 const FollowUsImgOut = styled.img`
     position: absolute;
+    @media (max-width: 768px) {
+        width: 60%;
+    }
 `
 const FollowUsImgIn = styled.img`
-
+    @media (max-width: 768px) {
+        width: 25%;
+    }
 `
 const DecoratorBlob = styled.img`
     position: absolute;
@@ -94,6 +208,10 @@ const DecoratorBlob = styled.img`
     transform: translate(0%, 30%);
     width: 40%;
     height: auto;
+
+    @media (max-width: 480px) {
+        display: none;
+    }
 `
 
 
@@ -105,20 +223,22 @@ function Footer() {
                 <FooterTextTitle>Chilled Grape</FooterTextTitle>
                 <FooterTextText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet.</FooterTextText>
             </FooterText>
-            <FooterCompanyContainer>
-                <FooterCompanyTitle>Company</FooterCompanyTitle>
-                <FooterCompanyLinks>About</FooterCompanyLinks>
-                <FooterCompanyLinks>Careers</FooterCompanyLinks>
-                <FooterCompanyLinks>Our Work</FooterCompanyLinks>
-                <FooterCompanyLinks>Contact</FooterCompanyLinks>
-            </FooterCompanyContainer>
-            <FooterCompanyContainer>
-                <FooterCompanyTitle>Products</FooterCompanyTitle>
-                <FooterCompanyLinks>About</FooterCompanyLinks>
-                <FooterCompanyLinks>Careers</FooterCompanyLinks>
-                <FooterCompanyLinks>Our Work</FooterCompanyLinks>
-                <FooterCompanyLinks>Contact</FooterCompanyLinks>
-            </FooterCompanyContainer>
+            <FooterCompanyContainerWrap>
+                <FooterCompanyContainer>
+                    <FooterCompanyTitle>Company</FooterCompanyTitle>
+                    <FooterCompanyLinks>About</FooterCompanyLinks>
+                    <FooterCompanyLinks>Careers</FooterCompanyLinks>
+                    <FooterCompanyLinks>Our Work</FooterCompanyLinks>
+                    <FooterCompanyLinks>Contact</FooterCompanyLinks>
+                </FooterCompanyContainer>
+                <FooterCompanyContainer>
+                    <FooterCompanyTitle>Products</FooterCompanyTitle>
+                    <FooterCompanyLinks>About</FooterCompanyLinks>
+                    <FooterCompanyLinks>Careers</FooterCompanyLinks>
+                    <FooterCompanyLinks>Our Work</FooterCompanyLinks>
+                    <FooterCompanyLinks>Contact</FooterCompanyLinks>
+                </FooterCompanyContainer>
+            </FooterCompanyContainerWrap>
             <FooterFollowUsContainer>
                 <FooterCompanyTitle>Follow Us</FooterCompanyTitle>
                 <FooterFollowUsItems>

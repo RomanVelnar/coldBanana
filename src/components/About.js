@@ -5,13 +5,19 @@ import PlantImg from "../images/plant.png";
 import PlantBG from "../images/plantBG.png"
 
 
-const Container1 = styled.section`
+const Container = styled.section`
     position: relative;
     max-width: 100vw;
     height: 100vh;
     background-color: #FFFFFF;
     margin-top: 100vh !important;
     padding-top: 10% !important;
+
+    @media (max-width: 480px) {
+        margin-top: 50vh !important;
+        padding-bottom: 0 !important;
+        height: 50vh;
+    }
 `
 
 const FlexContainer = styled.div`
@@ -24,6 +30,10 @@ const FlexContainer = styled.div`
 const Header = styled.div`
     width: 35vw;
     z-index: 1;
+
+    @media (max-width: 480px) {
+        width: 80vw;
+    }
 `
 
 const Title = styled.h1`
@@ -32,11 +42,37 @@ const Title = styled.h1`
     text-transform: uppercase;
     color: #212121;
     margin-bottom: 20px !important;
+
+    @media (max-width: 1200px) {
+        font-size: 32px;   
+    }
+    @media (max-width: 1024px) {
+        font-size: 28px;
+    }
+    @media (max-width: 900px) {
+        font-size: 24px;
+    }
+    @media (max-width: 768px) {
+        font-size: 20px;
+    }
 `
 
 const Description = styled.p`
     font-size: 16px;
     margin-bottom: 38px !important;
+
+    @media (max-width: 1200px) {
+        font-size: 15px;   
+    }
+    @media (max-width: 1024px) {
+        font-size: 14px;
+    }
+    @media (max-width: 900px) {
+        font-size: 13px;
+    }
+    @media (max-width: 768px) {
+        font-size: 12px;
+    }
 `
 
 const ReadMoreButton = styled.button`
@@ -46,6 +82,20 @@ const ReadMoreButton = styled.button`
     padding: 9px 43px !important;
     border: none;
     border-radius: 100px;
+    cursor: pointer;
+
+    @media (max-width: 1200px) {
+        font-size: 15px;   
+    }
+    @media (max-width: 1024px) {
+        font-size: 14px;
+    }
+    @media (max-width: 900px) {
+        font-size: 13px;
+    }
+    @media (max-width: 768px) {
+        font-size: 12px;
+    }
 `
 
 const PlantContainer = styled.div`
@@ -55,6 +105,10 @@ const PlantContainer = styled.div`
     justify-content: center;
     width: 40vw;
     height: 50vh;
+
+    @media (max-width: 480px) {
+        display:none;
+    }
 `
 
 const PlantDeco = styled.img`
@@ -79,7 +133,7 @@ const PlantDecoBG = styled.img`
 
 function About() {
     return(
-        <Container1>
+        <Container>
             <FlexContainer>
                 <Header>
                     <Title>Lorem ipsum dolor sit amet.</Title>
@@ -91,7 +145,7 @@ function About() {
                     <PlantDecoBG src={PlantBG} />
                 </PlantContainer>
             </FlexContainer>
-        </Container1>
+        </Container>
     );
 }
 

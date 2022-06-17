@@ -23,6 +23,28 @@ const Header = styled.div`
     left: 35%;
     transform: translate( -35%, 80%);
     z-index: 2;
+
+    @media (max-width: 1200px) {
+        top: 70%;
+        transform: translate( -35%, 70%);
+    }
+    @media (max-width: 1024px) {
+        top: 60%;
+        transform: translate( -35%, 60%);
+    }
+    @media (max-width: 900px) {
+        top: 50%;
+        transform: translate( -35%, 50%);
+    }
+    @media (max-width: 768px) {
+        top: 40%;
+        transform: translate( -35%, 40%);
+    }
+    @media (max-width: 480px) {
+        top: 70%;
+        transform: translate( -35%, 70%);
+        width: 60vw;
+    }
 `
 const Title = styled.h1`
     font-size: 64px;
@@ -30,6 +52,22 @@ const Title = styled.h1`
     text-transform: uppercase;
     color: #212121;
     margin-bottom: 20px;
+
+    @media (max-width:1200px) {
+        font-size: 58px;
+    }
+    @media (max-width: 1024px) {
+        font-size: 52px;
+    }    
+    @media (max-width: 900px) {
+        font-size: 46px;
+    }
+    @media (max-width: 768px) {
+        font-size: 40px;
+    }
+    @media (max-width: 480px) {
+        font-size: 30px;
+    }
 `
 const ReadMoreButton = styled.button`
     background: linear-gradient(90deg, rgba(115,224,169,1) 0%, rgba(91,104,223,1) 100%);
@@ -38,6 +76,23 @@ const ReadMoreButton = styled.button`
     padding: 12px 57px !important;
     border: none;
     border-radius: 100px;
+    cursor: pointer;
+
+    @media (max-width: 1200px) {
+        font-size: 18px
+    }
+    @media (max-width: 1024px) {
+        font-size: 16px;
+    }
+    @media (max-width: 900px) {
+        font-size: 14px;
+    }
+    @media (max-width: 768px) {
+        font-size: 12px;
+    }
+    @media (max-width: 480px) {
+        font-size: 10px;
+    }
 `
 const Image1 = styled.img`
     width: 30%;
