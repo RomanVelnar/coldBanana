@@ -15,6 +15,11 @@ const Container = styled.section`
     max-width: 100vw;
     max-height: 100vh;
     background-color: #FFFFFF;
+
+    @media (max-width: 768px) {
+        width: 100vw;
+        height: 40vh
+    }
 `
 const Header = styled.div`
     position: absolute;

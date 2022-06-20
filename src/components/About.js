@@ -18,6 +18,11 @@ const Container = styled.section`
         padding-bottom: 0 !important;
         height: 50vh;
     }
+
+    @media (max-width: 768px) {
+        margin-top: 40vh !important;
+        height: 70vh;
+    }
 `
 
 const FlexContainer = styled.div`

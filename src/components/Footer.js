@@ -81,6 +81,7 @@ const FooterTextText = styled.p`
 const FooterCompanyContainerWrap = styled.div`
     display: flex;
     flex-direction: row;
+    z-index: 1;
 
     @media (max-width: 480px) {
         display: flex;
@@ -211,6 +212,10 @@ const DecoratorBlob = styled.img`
 
     @media (max-width: 480px) {
         display: none;
+    }
+
+    @media (max-width: 768px) {
+        width: 48%
     }
 `
 
