@@ -1,3 +1,13 @@
+# Projects purpose
+Project was done for the coding test for mid-weight React developer at Cold Banana. THe structure is to fetch API and arrange the website to look similar to the Figma file they sent. 
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
